@@ -70,7 +70,7 @@ try {
     } else
         System.out.println("Lütfen seçim yapınız");
 } catch (Exception e){
-    System.out.println("Faiz Türünü Yalnızca 1,2,3 olarak seçebilirsiniz. Tekrar Deneyiniz.");
+    System.out.println("Faiz Türünü Yalnızca 1,2 veya 3 olarak seçebilirsiniz. Tekrar Deneyiniz.");
 
 }
 
