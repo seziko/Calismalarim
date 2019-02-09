@@ -4,11 +4,13 @@ public class Main{
 
 
     public static void main(String[] args) {
-        try {
-            int a = 1, b = 2, c = 3, i;
+       try {
 
+
+            int a = 1, b = 2, c = 3, i;
+            boolean devamEdilsinMi;
             Scanner scanner = new Scanner(System.in);
-            for (i = 0; i < 15; i++) {
+            do {
                 System.out.println("Faiz türünü seçiniz." +
                         "a-) Gunluk için 1 giriniz." +
                         " b-) Aylık için 2 giriniz" +
@@ -67,18 +69,16 @@ public class Main{
                     System.out.println("Ödenecek Faiz Tutarı " + odenecekFaiz);
 
                     System.out.println("Hesaplama Bitmiştir.");
+                    devamEdilsinMi = true;
 
 
                 } else
                     System.out.println("Faiz Türünü Yalnızca 1,2 veya 3 olarak seçebilirsiniz.");
+                devamEdilsinMi = true;
+            } while (devamEdilsinMi);
+        } catch (Exception e){
+            System.out.println("Faiz Türünü Yalnızca 1,2 veya 3 olarak seçebilirsiniz. Tekrar Deneyiniz.");
 
-            } catch(Exception e){
-                System.out.println("Faiz Türünü Yalnızca 1,2 veya 3 olarak seçebilirsiniz. Tekrar Deneyiniz.");
-
-            }
         }
     }
-
-
 }
-
