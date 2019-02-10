@@ -1,20 +1,18 @@
-package ornekler;
 import java.util.Scanner;
-public class Main{
 
-
+public class Main {
     public static void main(String[] args) {
-       try {
-
-
-            int a = 1, b = 2, c = 3, i;
-            boolean devamEdilsinMi;
-            Scanner scanner = new Scanner(System.in);
+        try {
+            boolean devamEdilsinMi=false;
             do {
+                int a = 1, b = 2, c = 3, d = 0;
+
+                Scanner scanner = new Scanner(System.in);
                 System.out.println("Faiz türünü seçiniz." +
                         "a-) Gunluk için 1 giriniz." +
                         " b-) Aylık için 2 giriniz" +
-                        " c-) Yıllık için 3 giriniz.");
+                        " c-) Yıllık için 3 giriniz."+
+                        " d-) çıkış yapmak için 0 giriniz..");
                 int input = scanner.nextInt();
                 if (input == c) {
                     double odenecekFaiz;
@@ -33,6 +31,7 @@ public class Main{
                     System.out.println("Ödenecek Faiz Tutarı " + odenecekFaiz);
 
                     System.out.println("Hesaplama Bitmiştir.");
+                    devamEdilsinMi=true;
 
                 } else if (input == b) {
                     double odenecekFaiz;
@@ -51,7 +50,7 @@ public class Main{
                     System.out.println("Ödenecek Faiz Tutarı " + odenecekFaiz);
 
                     System.out.println("Hesaplama Bitmiştir.");
-
+                    devamEdilsinMi=true;
                 } else if (input == a) {
                     double odenecekFaiz;
                     Scanner input3 = new Scanner(System.in);
@@ -69,16 +68,23 @@ public class Main{
                     System.out.println("Ödenecek Faiz Tutarı " + odenecekFaiz);
 
                     System.out.println("Hesaplama Bitmiştir.");
-                    devamEdilsinMi = true;
+                    devamEdilsinMi=true;
 
+                } else if (input == d){
+                    System.out.println("Başarılı bir şekilde çıkış yaptınız...");
+                    devamEdilsinMi = false;
+                    break;
 
-                } else
-                    System.out.println("Faiz Türünü Yalnızca 1,2 veya 3 olarak seçebilirsiniz.");
-                devamEdilsinMi = true;
-            } while (devamEdilsinMi);
+                }
+                System.out.println("Lütfen seçim yapınız");
+                devamEdilsinMi=true;
+            }while(devamEdilsinMi);
         } catch (Exception e){
             System.out.println("Faiz Türünü Yalnızca 1,2 veya 3 olarak seçebilirsiniz. Tekrar Deneyiniz.");
 
         }
+
     }
+
+
 }
